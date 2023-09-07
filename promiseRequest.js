@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
+// const API_BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
 
 
 function getRandomPokemon(){
@@ -9,7 +9,7 @@ function getRandomPokemon(){
 	
 	// Safer than ceil because it handles 0 better 
 	let ID = Math.floor(Math.random() * 1010) + 1;
-    
+
 	let result = fetch(API_BASE_URL + ID).then((response) => {
 		console.log("Response is: " + JSON.stringify(response, null, 4));
 
