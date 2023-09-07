@@ -14,6 +14,11 @@ function getRandomPokemon(){
 	})
 	.then(data => {
 		console.log("Data is: " + data);
+        console.log("Data retrieved for: " + data.name);
+        console.log("Image is: " + data.sprites.other["official-artwork"].front_default);
+
+        let pkmImage = document.getElementById("pokemonImage");
+		pkmImage.src = data.sprites.other["official-artwork"].front_default;
 
 		return data;
 	}).catch(error => {
